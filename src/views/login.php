@@ -23,9 +23,10 @@
                 <i class="icofont-runner-alt-1 ml-2"></i>
             </div>
             <div class="card-body">
+                <?php include(TEMPLATE_PATH . "/messages.php") ?>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" class="form-control mb-2" placeholder="Informe seu e-mail">
+                    <input value="<?php echo $_POST["email"] ?>" type="email" name="email" class="form-control mb-2" placeholder="Informe seu e-mail">
                     <label for="password">Senha</label>
                     <input type="password" name="password" class="form-control" placeholder="Informe sua senha">
                 </div>
