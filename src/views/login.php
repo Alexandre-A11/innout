@@ -26,9 +26,15 @@
                 <?php include(TEMPLATE_PATH . "/messages.php") ?>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input value="<?php echo $_POST["email"] ?>" type="email" name="email" class="form-control mb-2" placeholder="Informe seu e-mail">
+                    <input value="<?php echo $_POST["email"] ?>" type="email" name="email" class="form-control mb-2 <?php echo $errors['email'] ? 'is-invalid' : '' ?> " placeholder="Informe seu e-mail">
+                    <div class="invalid-feedback">
+                        <?php echo $errors['email'] ?>
+                    </div>
                     <label for="password">Senha</label>
-                    <input type="password" name="password" class="form-control" placeholder="Informe sua senha">
+                    <input type="password" name="password" class="form-control <?php echo $errors['password'] ? 'is-invalid' : '' ?>" placeholder="Informe sua senha">
+                    <div class="invalid-feedback">
+                        <?php echo $errors['password'] ?>
+                    </div>
                 </div>
             </div>
             <div class="card-footer">
