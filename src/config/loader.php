@@ -17,6 +17,19 @@ function loadView($viewName, $params = []) {
     require_once(VIEW_PATH . "/{$viewName}.php");
 }
 
+function loadTemplateView($viewName, $params = []) {
+
+    if (count($params) > 0){
+        foreach($params as  $key => $value){
+            if(strlen($key) > 0) {
+                ${$key} = $value;
+            }
+        }
+    }
+
+    require_once(VIEW_PATH . "/{$viewName}.php");
+}
+
 // function loadController($controllerName) {
 //     require_once(CONTROLLER_PATH . "/{$controllerName}.php");
 // }
