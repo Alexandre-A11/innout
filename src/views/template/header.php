@@ -22,7 +22,23 @@
             <i class="icofont-runner-alt-1 ml-2"></i>
         </div>
         <div class="menu-toggle mx-3">
-            <i class="iconfont-navigation-menu"></i>
+            <i class="icofont-navigation-menu"></i>
         </div>
         <div class="spacer"></div>
+        <div class="dropdown">
+            <div class="dropdown-button">
+                <span class="ml-3">Usuário John Smith</span>
+                <i class="icofont-simple-down mx-2"></i>
+            </div>
+            <div class="dropdown-content">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="logout.php">
+                            <i class="icofont-logout mr-2"></i>
+                            Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
