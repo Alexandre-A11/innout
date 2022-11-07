@@ -17,7 +17,7 @@ body.hide-sidebar {
     grid-template-columns: 1fr;
     grid-template-areas: 
         "header"
-        "sidebar"
+        "content"
         "footer";
  
 }
