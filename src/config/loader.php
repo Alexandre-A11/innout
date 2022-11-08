@@ -33,6 +33,6 @@ function loadTemplateView($viewName, $params = []) {
     require_once(TEMPLATE_PATH . "/footer.php");
 }
 
-// function loadController($controllerName) {
-//     require_once(CONTROLLER_PATH . "/{$controllerName}.php");
-// }
+function renderTitle($title, $subtitle, $icon = null){
+    require_once(TEMPLATE_PATH . "/title.php");
+}
