@@ -2,4 +2,9 @@
 
 session_start();
 requireValidSession();
-loadTemplateView('day_records');
+
+$timezone = new DateTimeZone('America/Sao_Paulo');
+$date = (new DateTime('now', $timezone))->getTimestamp();
+$today = date("d \d\\e M \d\\e Y");
+
+loadTemplateView('day_records', ['today' => $today]);

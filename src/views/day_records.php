@@ -5,10 +5,11 @@
         "Mantenha seu ponto consistente!", 
         "icofont-check-alt"
     );
+    include(TEMPLATE_PATH . "/messages.php");
   ?> 
     <div class="card">
         <div class="card-header">
-            <h3>10 de Janeiro de 2025</h3>
+            <h3><?php echo $today ?></h3>
             <p class="mb-0">Batimentos efetuados hoje</p>
         </div>
         <div class="card-body">
