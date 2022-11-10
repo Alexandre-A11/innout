@@ -61,12 +61,33 @@ class WorkingHours extends Model {
     
     function getLunchInterval() {
         [, $t2, $t3, ] =  $this->getTimes();
-        $breakInterval = new DateInterval("PT0S");
+        $lunchInterval = new DateInterval("PT0S");
         
-        if ($t2) $breakInterval = $t2->diff(new DateTime());
-        if ($t3) $breakInterval = $t3->diff($t2);
+        if ($t2) $lunchInterval = $t2->diff(new DateTime());
+        if ($t3) $lunchInterval = $t2->diff($t3);
 
-        return $breakInterval;
+        return $lunchInterval;
+    }
+
+    function getExitTime() {
+        [$t1,,, $t4] = $this->getTimes();
+        // $workDay = new DateInterval("PT8H"); // or ↷
+        $workDay = DateInterval::createFromDateString("8 hours");
+        
+        // $defaultBreakInterval = DateInterval::createFromDateString("1 hours");
+        
+        if (!$t1) { 
+            return (new DateTimeImmutable())->add($workDay);
+            // return (new DateTimeImmutable())->add($workDay)->add($defaultBreakInterval);
+        }
+        elseif ($t4) {
+            return $t4;
+        } 
+        else {
+            $total = sumIntervals($workDay, $this->getLunchInterval());
+            return $t1->add($total);
+        }
+        
     }
 
    private function getTimes() {
