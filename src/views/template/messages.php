@@ -2,6 +2,11 @@
 
 $errors = [];
 
+if (isset($_SESSION["message"])){
+    $message = $_SESSION["message"];
+    unset($_SESSION["message"]);
+}
+
 if ($exception) {
     $message = [
         "type" => "error",

@@ -1,12 +1,12 @@
 <main class="content">
-  <?php
+    <?php
     renderTitle(
         "Registrar Ponto", 
         "Mantenha seu ponto consistente!", 
         "icofont-check-alt"
     );
     include(TEMPLATE_PATH . "/messages.php");
-  ?> 
+  ?>
     <div class="card">
         <div class="card-header">
             <h3><?php echo $today ?></h3>
@@ -29,4 +29,12 @@
             </a>
         </div>
     </div>
+
+    <form class="mt-5" action="innout.php" method="post">
+        <div class="input-group no-border">
+            <input class="form-control" type="text" name="forcedTime" placeholder="Hora Simulada">
+            <button class="btn btn-danger ml-3">Simular Ponto</button>
+        </div>
+    </form>
+
 </main>
