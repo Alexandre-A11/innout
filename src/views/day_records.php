@@ -14,12 +14,12 @@
         </div>
         <div class="card-body">
             <div class="d-flex m-5 justify-content-around">
-                <span class="record">Entrada 1: <?php echo $records->time1 ?? "---" ?></span>
-                <span class="record">Saída 1: <?php echo $records->time2 ?? "---" ?></span>
+                <span class="record">Entrada 1: <?php echo $workingHours->time1 ?? "---" ?></span>
+                <span class="record">Saída 1: <?php echo $workingHours->time2 ?? "---" ?></span>
             </div>
             <div class="d-flex m-5 justify-content-around">
-                <span class="record">Entrada 2: <?php echo $records->time3 ?? "---" ?></span>
-                <span class="record">Saída 2: <?php echo $records->time4 ?? "---" ?></span>
+                <span class="record">Entrada 2: <?php echo $workingHours->time3 ?? "---" ?></span>
+                <span class="record">Saída 2: <?php echo $workingHours->time4 ?? "---" ?></span>
             </div>
         </div>
         <div class="card-footer d-flex justify-content-center">
